@@ -1,0 +1,108 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jd="http://schemas.android.com/apk/res/com.jd.a6i"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/jd_login_background"
+    android:orientation="vertical"
+    tools:context=".LoginActivity" >
+	<ImageView
+	    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/jd_top"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/jd_panel"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_login_input"
+            android:orientation="vertical" >
+
+            <com.jd.a6i.view.DropDownView 
+                android:id="@+id/usernameDropDown"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                jd:editHint="@string/username"
+                jd:editStyle="@style/JDEditText"
+                jd:editLeftDrawable="@drawable/jd_username_32"/>
+
+            <com.jd.a6i.view.PasswordShow 
+                android:id="@+id/passwordShow"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_margin="12dp"
+                android:nextFocusDown="@+id/rememberUsername"/>
+
+        </LinearLayout>
+		<RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+            <CheckBox
+                style="@style/JDBaseTheme.CheckBoxTheme"
+                android:id="@+id/rememberUsername"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/rememberUsername" />
+
+            <CheckBox
+                style="@style/JDBaseTheme.CheckBoxTheme"
+                android:id="@+id/rememberPassword"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/rememberPassword" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal" >
+			
+            <Button
+                android:id="@+id/buttonLogin"
+                style="@style/JDBaseTheme.ButtonTheme"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:text="@string/login" />
+
+            <Button
+                android:id="@+id/buttonCancel"
+                style="@style/JDBaseTheme.ButtonTheme"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="@string/cancel" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal" >
+
+        <TextView
+            android:id="@+id/textVersionNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="18sp" 
+            android:gravity="center"/>
+    </RelativeLayout>
+</LinearLayout>

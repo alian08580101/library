@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jd.a6i"
+    android:versionCode="1"
+    android:versionName="20140616-Volley(1.0)" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="16" />
+	<uses-permission android:name="android.permission.INTERNET"/>
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+	<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> 
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+	<uses-permission android:name="android.permission.KILL_BACKGROUND_PROCESSES"/>
+	<uses-permission android:name="android.permission.VIBRATE"/>
+    <application
+        android:name="com.jd.a6i.JDApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/jd_icon"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.Light.NoTitleBar">
+        <activity
+            android:name="com.jd.a6i.LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.jd.a6i.MainActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.jd.a6i.delivery.DeliveryActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.jd.a6i.delivery.SealCarOrBoxErrorActivity"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.jd.a6i.inspection.InspectionActivity"
+            android:launchMode="singleTask" >
+        </activity>
+        <activity
+            android:name="com.jd.a6i.inspection.InspectionOperateActivity"
+            android:launchMode="singleTask">
+        </activity>
+        <activity 
+            android:name="com.jd.a6i.query.QueryActivity"
+            android:launchMode="singleTask"/>
+        <activity 
+            android:name="com.jd.a6i.query.QueryPackageActivity"
+            android:launchMode="singleTask"/>
+        <activity 
+            android:name="com.jd.a6i.query.QueryPackageBoxActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity 
+            android:name="com.jd.a6i.query.QueryPackagePartActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity 
+            android:name="com.jd.a6i.sortingtally.SortingTallyActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity 
+            android:name="com.jd.a6i.cancelsorting.CancelSortingActivity"
+            android:launchMode="singleTask"/>
+        <activity 
+            android:name="com.jd.a6i.sortingtally.SortingTallyTabActivity"
+            android:launchMode="singleTask"/>
+         <activity 
+            android:name="com.jd.a6i.sortingtally.SmallSortingActivity"
+            android:launchMode="singleTask"/>
+          <activity 
+            android:name="com.jd.a6i.sortingtally.BigSortingActivity"
+            android:launchMode="singleTask"/>
+          <activity 
+            android:name="com.jd.a6i.sortingtally.SealBoxActivity"
+            android:launchMode="singleTask"/>
+          <activity 
+            android:name="com.jd.a6i.sortingtally.DifferenceQueryActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden"/>
+       
+        <activity 
+            android:name="com.jd.a6i.volley.AfterUploadActivity"
+            android:launchMode="singleTask"/>
+        
+        <receiver
+            android:name="com.jd.a6i.common.AlarmManagerBroadcastReceiver"
+            android:process="com.jd.a6i"/>
+        <receiver android:name="com.jd.a6i.common.StatusBarBroadcastReceiver">
+            <intent-filter>
+                <action android:name="com.jd.action.refresh.status.bar" />
+            </intent-filter>
+        </receiver>
+        <service android:name="com.jd.a6i.common.UploadBackgroundService" />
+    </application>
+
+</manifest>

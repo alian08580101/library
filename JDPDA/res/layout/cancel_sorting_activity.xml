@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jd="http://schemas.android.com/apk/res/com.jd.a6i"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/jd_main_background">
+    <include layout="@layout/action_bar_top_nav"/>
+    <com.jd.a6i.view.TextEditView 
+        android:id="@+id/jdCancelSortingNo"
+        style="@style/JDTextEditViewHorizontalTheme"
+	    jd:labelText="@string/cancelSortingNo"
+	    jd:labelPosition="left"/>
+    <TextView 
+        style="@style/JDBaseTheme.JDTextViewTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/prompt"/>
+    <TextView 
+        style="@style/JDBaseTheme.JDTextViewTheme"
+        android:id="@+id/textPrompt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"/>
+    
+    <Button 
+        style="@style/JDBaseTheme.ButtonTheme"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="160dp"
+        android:text="@string/cancelSortingF1"
+        android:id="@+id/cancelsortingbt"/>
+</LinearLayout>

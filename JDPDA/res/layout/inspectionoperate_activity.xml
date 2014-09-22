@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jd="http://schemas.android.com/apk/res/com.jd.a6i"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/jd_main_background" >
+    
+    <include 
+    	    layout="@layout/action_bar_top_nav"/>
+	    <com.jd.a6i.view.TextEditView
+	        android:id="@+id/threeSidesNo"
+            style="@style/JDTextEditViewHorizontalTheme"
+	        jd:labelText="@string/operateType_threeSide"	
+	        jd:labelPosition="left"/>
+	    <com.jd.a6i.view.TextEditView 
+	        android:id="@+id/caseNo"
+            style="@style/JDTextEditViewHorizontalTheme"
+	        jd:labelText="@string/boxNo"
+	        jd:labelPosition="left"/>
+	    <com.jd.a6i.view.TextEditView 
+	        android:id="@+id/waybillNo"
+            style="@style/JDTextEditViewHorizontalTheme"
+	        jd:labelText="@string/billNo"
+	        jd:labelPosition="left"/>
+	   
+        <RelativeLayout 
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+               <TextView 
+               style="@style/JDBaseTheme.TextViewTheme"
+	           android:layout_width="match_parent"
+	           android:layout_height="50dp"
+	           android:id="@+id/currentWaybillNo"
+	           android:text="@string/currentWaybill"
+	           android:textSize="18sp"/>
+                
+               <TextView 
+	           android:layout_width="wrap_content"
+	           android:layout_height="wrap_content"
+	           android:id="@+id/exceptionType"
+	           android:text="@string/exceptionType"
+	           android:textSize="18sp"
+	           android:layout_below="@+id/currentWaybillNo"
+	           android:layout_centerHorizontal="true"
+	           android:layout_toLeftOf="@+id/spinnerExceptionType"
+	           android:layout_alignParentLeft="true"
+	           android:paddingTop="8dp"
+	           style="@style/JDBaseTheme.TextViewTheme"/>
+
+               <Spinner 
+	           android:layout_width="205dp"
+	           android:layout_height="wrap_content"
+	           android:id="@+id/spinnerExceptionType"
+	           android:textSize="18sp" 
+	           android:spinnerMode="dropdown"
+	           android:layout_alignParentRight="true"
+	           android:layout_below="@+id/currentWaybillNo"
+	           android:prompt="@string/exceptionType"/>
+               
+               <TextView android:id="@+id/packageCount"
+                   android:layout_height="wrap_content"
+                   android:layout_width="fill_parent"
+                   android:layout_above="@+id/nextBox"
+                   android:background="@drawable/jd_corner_round"
+                   android:textSize="18sp"
+                   android:padding="5dp"/>
+               
+               <Button
+                style="@style/JDBaseTheme.ButtonTheme"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:text="@string/the_next_box"
+	            android:layout_alignParentBottom="true"
+	            android:textSize="18sp"
+                android:id="@+id/nextBox"/>
+           </RelativeLayout>
+
+</LinearLayout>

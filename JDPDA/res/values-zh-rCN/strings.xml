@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+     <string name="same_day_text">当天</string>
+     <string name="after_interval_day_text">第%d天</string>
+   	 <string name="before_interval_day_text">前%d天</string>
+    
+     <string name="app_name">360PDA</string>
+     <string name="action_settings">Settings</string>
+     <string name="hello_world">Hello world!</string>
+     <string name="loading">正在加载&#8230;</string>
+     <string name="yes">是</string>
+     <string name="no">否</string>
+     <string name="title">京东移动终端</string>
+     <string name="username">请输入账号</string>
+     <string name="password">请输入密码</string>
+     <string name="login">登录</string>
+     <string name="cancel">取消</string>
+     <string name="version">版本：</string>
+     <string name="rememberUsername">记住账号</string>
+     <string name="rememberPassword">记住密码</string>
+     <string name="pleaseSelectErrorType">请选择异常类型</string>
+     <string name="upload">上传</string>
+     <string name="submit">已上传</string>
+     <string name="operateSuccess">操作成功！</string>
+     <string name="operateFailure">操作失败！</string>
+     <string name="errorCode">返回错误码%1$d,%2$s!</string>
+     <string name="errorSealLableNo">%1$s封签号已使用，请重新输入封签号！</string>
+     <string name="delivery">收货</string>
+     <string name="inspection">验货</string>
+     <string name="sortingTally">分拣理货</string>
+     <string name="cancelSorting">取消分拣</string>
+     <string name="query">查询</string>
+     <string name="queryPartBt">查询F1</string>
+     
+     <string name="sealCarNo">封车号：</string>
+     <string name="departureBatch">发车批次：</string>
+     <string name="carNo">车号：</string>
+     <string name="turnoverBoxNo">周转箱编码：</string>
+     <string name="sealBoxNo">封箱号：</string>
+	<!--  <string name="boxNo"><![CDATA[箱号<font size="3" color="red">*</font>:]]></string> -->
+	 <string name="boxNo">箱号：</string>
+	 <string name="logisticsDriver">物流司机：</string>
+	 <string name="nextCar">下一车F1</string>
+	 <string name="errorSealCar">车封异常F2</string>
+	 <string name="errorSealBox">箱封异常F3</string>
+	 
+	 <string name="warehouseSorting">仓储分拣</string>
+	 <string name="aftersaleSorting">售后分拣</string>
+	 <string name="bMerchantSorting">B商家分拣</string>
+	 <string name="stepSortingCenterSorting">跨分拣中心分拣</string>
+	 <string name="smallSorting">小件分拣</string>
+	 <string name="bigSorting">大件分拣</string>
+	 <string name="sortingSuccess">分拣成功！</string>
+	 <string name="sortingFailure">分拣失败！</string>
+	 
+	 <string name="prompt">提示信息：</string>
+	 <string name="sealBox">封箱F1</string>
+	 <string name="differenceQuery">差异查询F2</string>
+	 
+	 <string name="owerStation">所属站点:%1$s</string>
+	 <string name="scaned">已扫描</string>
+	 <string name="unscaned">未扫描</string>
+	 
+	 <string name="station">站点：</string>
+	 <string name="siteName">站点名：</string>
+	 <string name="billNo">包裹号|运单号：</string>
+	 <string name="sealLabelNo">封签号：</string>
+	 <string name="sortingSealLabel">分拣-封签</string>	 
+	 <string name="cancelSortingNo">箱号|运单|包裹号:</string>
+	 <string name="cancelSortingF1">取消分拣F1</string>
+	 <string name="checkSealLabelNoPrompt">请扫描封签号！</string>
+	 <string name="errorSealLabelNo">请扫描正确的封签号！</string>
+	 
+	 <string name="packageBoxNoQuery">包裹-箱号查询</string>
+	 <string name="packagePartQuery">包裹不全查询</string>
+	 <string name="packageQuery">包裹查询</string>
+	 
+	 <string name="loginPrompt">正在登录......</string>
+	 <string name="checkSealCarNoPrompt">正在验证封车号&#8230;</string>
+	 <string name="checkSealBoxNoPrompt">正在验证封箱号&#8230;</string>
+	 <string name="matchSealCarNoWithCarNoPrompt">扫描的封车号与车号不匹配，是否继续进行收货？</string>
+	 <string name="matchSealCarNoWithBoxNoPrompt">扫描的封箱号与箱号不匹配，是否继续进行收货？</string>
+	 <string name="deliveryCheckPrompt">%1$s已收货！</string>
+	 <string name="checkBoxNoPrompt">请扫描箱号！</string>
+	 <string name="checkStationNoPrompt">请扫描站点号！</string>
+	 <string name="selectErrorTypePrompt">请选择异常类型！</string>
+	 <string name="boxAndSingletonCount">箱数：%1$d 单件数：%2$d</string>
+	 <string name="smallSortingTallyPrompt">箱数：%1$d,运单数：%2$d,包裹数：%3$d</string>
+	 <string name="bigSortingTallyPrompt">运单数：%1$d,包裹数：%2$d</string>
+	 <string name="packageNoSortingPrompt">包裹%1$s已经分拣，请不要重复分拣！</string>
+	 <string name="self_return_inspection">自营退货验货</string>
+	 <string name="the_three_party_to_return">三方退货验货</string>
+	 <string name="sorting_center_return_inspection">分拣中心退货验货</string>
+	 <string name="exceptionType">异常类型：</string>
+	 <string name="currentWaybill">当前单号：</string>
+	 <string name="errorTypeCheck">请选择</string>
+	 <string name="the_next_box">下一箱F1</string>
+	 <string name="operateType_threeSide">三方编号:</string>
+	 <string name="operateType_sortingCenter">分拣中心:</string>
+	 
+	 <string name="loginError">登录异常，请重新登录！</string>
+	 <string name="checkErpAccount">请记住账户</string>
+	 <string name="nullErpAccount">请输入账号</string>
+	 <string name="nullPassword">请输入密码</string>
+	 <string name="networkError">网络异常，请检查网络是否连接！</string>
+	 <string name="selfInspection">自营退货验货</string>
+	 <string name="threeInspection">三方退货验货</string>
+	 <string name="sortingInspection">分拣中心退货验货</string>
+	 <string name="noWaybillNo">请扫描包裹号/运单号</string>
+	 <string name="waybillNoError">请扫描正确的包裹号或运单号！</string>
+	 <string name="responseError">基础数据服务器出错</string>
+	 <string name="haveInpection">包裹%1$s已验货</string>
+	 <string name="packageCount">运单：%1$2d 包裹：%2$2d</string>
+	 <string name="noThreeSide">请扫描三方编号</string>
+	 <string name="noSorting">请扫描分拣中心</string>
+	 <string name="errorType">异常类型：</string>
+	 <string name="errorURI">URI错误，请重新检查！</string>
+	 <string name="deliveryOfBackGoodsGroup">退货组收货</string>
+	 <string name="errorSealCarNo">请扫描正确的封车号!</string>
+	 <string name="errorSealBoxNo">请扫描正确的封箱号!</string>
+	 <string name="errorTurnoverBoxNo">请扫描正确的周转箱编码！</string>
+	 <string name="errorCarNo">请扫描正确的车号！</string>
+	 <string name="errorBoxNo">请扫描正确的箱号！</string>
+	 <string name="errorCheckSealCarNo">封车号错误，没有与该封车号对应的车号和司机信息！</string>
+	 <string name="errorCheckSealBoxNo">封箱号错误，没有与该封箱号对应的箱号！</string>
+     <string name="boxCodeError">请扫描正确的箱号！</string>
+     <string name="ifSwitchBox">是否换箱？</string>
+     <string name="ifSwitchSite">是否换站？</string>
+     <string name="noBoxInfo">无箱号信息！</string>
+     <string name="packBoxQueryDirect">正向包裹箱号查询</string>
+     <string name="packBoxQueryReserve">逆向包裹箱号查询</string>
+     <string name="packBoxQueryThird">三方包裹箱号查询</string>
+     
+     <string name="queryPropmt">请确认所有的操作分拣的PDA数据都是已上传，否则查询不准！但如果查不到数据，可以进行再次的分拣，分拣正确的箱子里，系统以最后分拣的为准。</string>
+     <string name="returnGroupInpection">退货组验货</string>
+     <string name="dataQuery">数据查询</string>
+     <string name="querynodata">无查询结果，请确认所有分拣PDA已经上传，或可直接装箱！</string>
+     <string name="querypart">一单多件不全查询</string>
+     <string name="queryPartNoSite">请输入站点或箱号!</string>
+     <string name="indextv">序号：</string>
+     <string name="waybilltv">包裹：</string>
+     <string name="mark">状态：</string> 
+     <string name="queryPackagePropmt">请确认所有操作分拣的PDA数据都已上传，否则查询结果有可能是不正确的！</string>
+     <string name="cancelSortingpackage">将取消分拣%1$s</string>
+     <string name="cancelSortingNopackage">请扫描运单号/单号/包裹号！</string>
+     <string name="cancelSortingPackagefailed">请扫描正确的箱号或运单号或包裹号</string>
+     <string name="cancelSortingSuccess">取消成功</string>
+     <string name="noBox">箱子%1$s不存在！</string>
+     <string name="boxMess">箱子%1$s信息如下：\n</string>
+     <string name="updataedNum">已上传包裹数：%1$d\n未上传包裹数：%2$d\n</string>
+     <string name="totalBoxNum">共计包裹数：%1$d\n</string>
+     <string name="packageNum">包裹数：%1$d\n</string>
+     <string name="siteBoxMess">站点名称：%1$s\n站点号：%2$d</string>
+     <string name="saveDataError">保存数据失败！</string>
+     
+     <string name="uploadSealCarError">车封异常</string>
+     <string name="uploadSealBoxError">箱封异常</string>
+     <string name="uploadInspection">验货</string>
+     <string name="uploadDelivery">收货</string>
+     <string name="uploadSealBoxInfo">封箱信息</string>
+     <string name="uploadSortingTally">分拣理货</string>
+     <string name="errorSortingNo">错误的分拣中心编号</string>
+     <string name="errorThridNo">错误的三方编号</string>
+</resources>

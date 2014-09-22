@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jd="http://schemas.android.com/apk/res/com.jd.a6i"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/jd_main_background">
+    <include layout="@layout/action_bar_top_nav"/>
+	<com.jd.a6i.view.TextEditView
+	    style="@style/JDBaseTheme.JDTextViewTheme"
+	    android:id="@+id/jdPackageBoxNo"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    jd:labelText="@string/billNo"
+	    jd:labelPosition="left"/>
+	<ListView
+	    android:id="@+id/listQuery"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_weight="1"
+	    android:dividerHeight="1dp"
+	    android:divider="@color/blue"
+	    android:background="@drawable/jd_corner_round"/>
+	<TextView 
+	    android:id="@+id/propmt"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:textColor="@color/red"
+	    android:textSize="18sp"/>
+</LinearLayout>

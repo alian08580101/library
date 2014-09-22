@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="createSqlArray">
+        <item>
+	        CREATE TABLE IF NOT EXISTS account(
+	        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	        siteCode INTEGER,
+	        siteName VARCHAR(100),
+	        erpAccount VARCHAR(100),
+	        password VARCHAR(100),
+	        staffId INTEGER,
+	        staffName VARCHAR(100),
+	        orgId INTEGER,
+	        dmsCode VARCHAR(100),
+	        rememberPassword INTEGER);
+        </item>
+        <item>
+        CREATE TABLE IF NOT EXISTS inspection(
+        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+        sealBoxCode VARCHAR(16),
+        boxCode VARCHAR(100),
+        packageBarOrWaybillCode VARCHAR(100),
+        exceptionType VARCHAR(50),
+        receiveSiteCode INTEGER,
+        operateType INTEGER,
+        businessType INTEGER,
+        userCode INTEGER,
+        userName VARCHAR(100),
+        siteCode INTEGER,
+        siteName VARCHAR(100),
+        operateTime VARCHAR(50),
+        stateCode INTEGER)   
+        </item>
+         <item>CREATE INDEX IF NOT EXISTS InspectionIndex1 ON Inspection(packageBarOrWaybillCode,operateType); </item>
+         <item>CREATE INDEX IF NOT EXISTS InspectionIndex2 ON Inspection(boxCode,operateType); </item>
+         <item>CREATE INDEX IF NOT EXISTS InspectionIndex3 ON Inspection(stateCode); </item>
+        <item>CREATE UNIQUE INDEX IF NOT EXISTS accountIndex ON account(id,erpAccount); </item>
+    	<item>
+	        CREATE TABLE IF NOT EXISTS sealCar(
+	        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	        sealCode VARCHAR(100),
+	        vehicleCode VARCHAR(100),
+	        driverCode INTEGER,
+	        driver VARCHAR(100));
+        </item>
+        <item>CREATE UNIQUE INDEX IF NOT EXISTS sealCarIndex ON sealCar(id,sealCode); </item>
+        <item>
+	        CREATE TABLE IF NOT EXISTS sealBox(
+	        id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+	        sealCode VARCHAR(100),
+	        boxCode VARCHAR(100));
+        </item>
+        <item>CREATE UNIQUE INDEX IF NOT EXISTS sealBoxIndex ON sealBox(id,sealCode); </item>
+        
+        <item>
+            CREATE TABLE IF NOT EXISTS delivery(
+            id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+            shieldsCarCode VARCHAR(100),
+            carCode VARCHAR(100),
+            sealBoxCode VARCHAR(100),
+            packOrBox VARCHAR(100),
+            turnoverBoxCode VARCHAR(100),
+            queueNo VARCHAR(100),
+            departureCarId VARCHAR(100),
+            shieldsCarTime VARCHAR(100),
+            businessType INTEGER,
+            userCode INTEGER,
+            userName VARCHAR(100),
+            siteCode INTEGER,
+            siteName VARCHAR(100),
+            operateTime VARCHAR(100),
+            uploadStatus INTEGER);
+        </item>
+        <item>CREATE UNIQUE INDEX IF NOT EXISTS deliveryIndex ON delivery(id,packOrBox); </item>
+        
+    	<item>
+    	    CREATE TABLE IF NOT EXISTS errorType(
+    	    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    	    typeName VARCHAR(100),
+    	    typeCode INTEGER,
+    	    memo VARCHAR(100),
+    	    parentId INTEGER,
+    	    nodeLevel INTEGER,
+    	    typeGroup INTEGER,
+    	    dataUpdate VARCHAR(100));
+    	</item>
+    	<item>CREATE UNIQUE INDEX IF NOT EXISTS errorTypeIndex ON errorType(id,typeGroup);</item>
+    	
+    	<item>
+    	    CREATE TABLE IF NOT EXISTS sealCarError(
+    	    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    	    shieldsCode VARCHAR(100),
+    	    carCode VARCHAR(100),
+    	    shieldsError VARCHAR(100),
+    	    businessType INTEGER,
+    	    userCode INTEGER,
+    	    userName VARCHAR(100),
+    	    siteCode INTEGER,
+    	    siteName VARCHAR(100),
+    	    operateTime VARCHAR(100),
+    	    uploadStatus INTEGER);
+    	</item>
+    	<item>CREATE UNIQUE INDEX IF NOT EXISTS sealCarErrorIndex ON sealCarError(id,uploadStatus)</item>
+    	
+    	<item>
+    	    CREATE TABLE IF NOT EXISTS sealBoxError(
+    	    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    	    shieldsCode VARCHAR(100),
+    	    boxCode VARCHAR(100),
+    	    shieldsError VARCHAR(100),
+    	    businessType INTEGER,
+    	    userCode INTEGER,
+    	    userName VARCHAR(100),
+    	    siteCode INTEGER,
+    	    siteName VARCHAR(100),
+    	    operateTime VARCHAR(100),
+    	    uploadStatus INTEGER);
+    	</item>
+    	<item>CREATE UNIQUE INDEX IF NOT EXISTS sealBoxErrorIndex ON sealBoxError(id,uploadStatus)</item>
+    	
+    	<item>
+    	    CREATE TABLE IF NOT EXISTS sortingTally(
+    	    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    	    receiveSiteCode INTEGER,
+    	    receiveSiteName VARCHAR(100),
+    	    boxCode VARCHAR(100),
+    	    packageCode VARCHAR(100),
+    	    isCancel INTEGER,
+    	    isLoss INTEGER,
+    	    featureType INTEGER,
+    	    businessType INTEGER,
+    	    userCode INTEGER,
+    	    userName VARCHAR(100),
+    	    siteCode INTEGER,
+    	    siteName VARCHAR(100),
+    	    operateTime VARCHAR(100),
+    	    uploadStatus INTEGER);
+    	</item>
+    	<item>CREATE UNIQUE INDEX IF NOT EXISTS sortingTallyIndex ON sortingTally(id,boxCode)</item>
+    	
+    	<item>
+    	    CREATE TABLE IF NOT EXISTS sealBoxInfo(
+    	    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    	    sealCode VARCHAR(100),
+    	    boxCode VARCHAR(100),
+    	    businessType INTEGER,
+    	    userCode INTEGER,
+    	    userName VARCHAR(100),
+    	    siteCode INTEGER,
+    	    siteName VARCHAR(100),
+    	    operateTime VARCHAR(100),
+    	    uploadStatus INTEGER);
+    	</item>
+    	<item>CREATE UNIQUE INDEX IF NOT EXISTS sealBoxInfoIndex ON sealBoxInfo(id,sealCode)</item>
+    </string-array>
+
+</resources>
